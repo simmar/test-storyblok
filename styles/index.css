@@ -1,0 +1,30 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+.component--site-logo.purple {
+    --color-foreground: #9743ff;
+    --color-hover-foreground: #6e00f5;
+    --color-focus-foreground: #5700c2;
+    --color-focus-foreground-2: #9743ff;
+    --color-disabled: rgba(0,0,0,0.3);
+}
+.component--site-logo {
+    color: var(--color-foreground);
+    fill: currentColor;
+    transition: all .35s;
+    width: calc(129px + (7100vw - 22720px)/ 1120);
+}
+.purple {
+    color: #9743ff !important;
+}
+
+.white {
+    color: white !important;
+}
+
+.component--site-logo.purple .logo-text {
+    fill: #000;
+}
