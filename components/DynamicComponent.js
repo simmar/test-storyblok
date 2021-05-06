@@ -1,10 +1,11 @@
 import SbEditable from 'storyblok-react'
 import Feature from './Feature'
 import Grid from './Grid'
-import MainNav from './mainNav'
-import Nav from './Nav'
+import MainNav from './MainNav'
 import Teaser from './Teaser'
+import TopNav from './TopNav'
 import Youtube from './Youtube'
+
 
 // resolve Storyblok components to Next.js components
 const Components = {
@@ -12,8 +13,8 @@ const Components = {
     'grid': Grid,
     'feature': Feature,
     'youtube': Youtube,
+    'topNav': TopNav,
     'mainNav': MainNav,
-    'nav': Nav,
 }
 
 const DynamicComponent = ({ blok }) => {

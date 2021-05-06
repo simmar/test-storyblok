@@ -1,9 +1,13 @@
 import React from 'react'
- 
-const Teaser = ({blok}) => {
+
+const Teaser = ({ blok }) => {
   return (
-    <h2>{blok.headline}</h2>
+    <section>
+      <div className="container">
+        <h2>{blok.headline}</h2>
+      </div>
+    </section>
   )
 }
- 
+
 export default Teaser
