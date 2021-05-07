@@ -1,46 +1,28 @@
 import React from 'react';
-
+import Hero from './hero';
 const FeaturePosts = ({ blok }) => {
-
-  const posts = blok.posts;
-
-  const displayDate = (date) => {
-    const _date = new Date(date);
-
-    return _date.toLocaleDateString() + ' ' + _date.toLocaleTimeString();
-  };
-
   return (
+    <section>
+      {/* Popular news  header*/}
+      <div className="popular__news-header">
+        <div className="container">
+          <div className="row no-gutters">
+            <div className="col-md-8 ">
+              {/* <SliderHero slider={fields.slider} /> */}
+            </div>
+            <div className="col-md-4">
+              <div className="popular__news-right">
+                {blok.posts.map((post, index) => (
+                  <Hero blok={post.content} key={index} />
+                ))}
 
-    <div className="card__post" >
-      <div className="card__post__body card__post__transition">
-        <a href="#">
-          <img src={posts[0].content.image.filename} className="img-fluid" alt="" />
-        </a>
-        <div className="card__post__content bg__post-cover">
-          <div className="card__post__category">{posts[0].content.title}</div>
-          <div className="card__post__title">
-            <h5>
-              <a href="#">{posts[0].content.text}</a>
-            </h5>
-          </div>
-          <div className="card__post__author-info">
-            <ul className="list-inline">
-              <li className="list-inline-item">
-                <a href="./card-article-detail-v1.html">{posts[0].content.author}</a>
-              </li>
-              <li className="list-inline-item">
-                <span>{displayDate(posts[0].content.date)}</span>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-
-
-    </div>
+    </section>
   );
-}
+};
 
 export default FeaturePosts

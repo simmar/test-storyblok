@@ -1,25 +1,37 @@
 
-// import { SliderHero } from './hero-slider';
-import { FeaturePost } from './Feature-posts';
+const displayDate = (date) => {
+    const _date = new Date(date);
+
+    return _date.toLocaleDateString() + ' ' + _date.toLocaleTimeString();
+};
 const Hero = ({ blok }) => {
-  return (
-    <section>
-      {/* Popular news  header*/}
-      <div className="popular__news-header">
-        <div className="container">
-          <div className="row no-gutters">
-            <div className="col-md-8 ">
-              {/* <SliderHero slider={fields.slider} /> */}
+    console.log('blok', blok);
+    return (
+        <div className="card__post" >
+            <div className="card__post__body card__post__transition">
+                <a href="#">
+                    <img src={blok.image.filename} className="img-fluid" alt="" />
+                </a>
+                <div className="card__post__content bg__post-cover">
+                    <div className="card__post__category">{blok.title}</div>
+                    <div className="card__post__title">
+                        <h5>
+                            <a href="#">{blok.text}</a>
+                        </h5>
+                    </div>
+                    <div className="card__post__author-info">
+                        <ul className="list-inline">
+                            <li className="list-inline-item">
+                                <a href="./card-article-detail-v1.html">{blok.author}</a>
+                            </li>
+                            <li className="list-inline-item">
+                                <span>{displayDate(blok.date)}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div className="col-md-4">
-              <div className="popular__news-right">
-                <FeaturePost />
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 export default Hero
