@@ -7,3 +7,21 @@ const Layout = ({ children }) => (
 )
 
 export default Layout
+
+
+
+// import { Footer } from './Footer'
+
+
+// const Layout = ({ children }) => (
+//     <div>
+//         <div className="max-w-5xl py-10 mx-auto">
+//             <>
+//                 {children}
+//                 <Footer />
+//             </>
+//         </div>
+//     </div>
+// )
+
+// export default Layout

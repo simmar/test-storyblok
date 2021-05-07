@@ -9,22 +9,6 @@ export default function Home(props) {
   const story = useStoryblok(props.story)
 
   return (
-    // <div className={styles.container}>
-    //   <Head>
-    //     <title>Create Next App</title>
-    //     <link rel="icon" href="/favicon.ico" />
-    //   </Head>
-
-    //   <header>
-    //     <h1>
-    //       { story ? story.name : 'My Site' }
-    //     </h1>
-    //   </header>
-
-    //   <main>
-    //     {story ? <Layout><Page content={story.content} /> </Layout> : null}
-    //   </main>
-    // </div >
     <div className="flex flex-col bg-white">
       <Head>
         <link rel="shortcut icon" href="/favicon/favicon.png" type="image/png" />
@@ -48,6 +32,7 @@ export async function getStaticProps(context) {
   let slug = "home"
   let params = {
     version: "draft", // or 'published'
+    "resolve_relations": "feature-posts.posts"
   }
 
   if (context.preview) {

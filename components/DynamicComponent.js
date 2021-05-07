@@ -1,5 +1,7 @@
 import SbEditable from 'storyblok-react'
 import Feature from './Feature'
+import FeaturePosts from './Feature-posts'
+import Footer from './Footer'
 import Grid from './Grid'
 import MainNav from './MainNav'
 import Teaser from './Teaser'
@@ -12,9 +14,11 @@ const Components = {
     'teaser': Teaser,
     'grid': Grid,
     'feature': Feature,
+    'feature-posts': FeaturePosts,
     'youtube': Youtube,
     'topNav': TopNav,
     'mainNav': MainNav,
+    'footerCategories': Footer,
 }
 
 const DynamicComponent = ({ blok }) => {
